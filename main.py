@@ -1,5 +1,5 @@
 import os
 
-def nom_fichier(fichier):
-    full_name=os.path.split("speeches")
-
+dirPath = r"speeches"
+result = [f for f in os.listdir(dirPath) if os.path.isfile(os.path.join(dirPath, f))]
+print(result)
