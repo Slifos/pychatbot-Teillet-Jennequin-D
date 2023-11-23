@@ -10,4 +10,3 @@ for i in range(len(result)):
         if elt in result[i]:
             result[i] = elt
 print(result)
-print('hey')
