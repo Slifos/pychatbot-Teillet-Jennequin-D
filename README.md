@@ -1,3 +1,4 @@
 # pychatbot-Teillet-Jennequin-D
-xetooo = Thibault Teillet "\n"
+xetooo = Thibault Teillet
+
 Slifos = Simon Jennequin
