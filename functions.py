@@ -1,6 +1,4 @@
 import re
-def est_sous_chaine(chaine, sous_chaine):
-    return sous_chaine in chaine
 
 #extraction des noms à partir des documents
 def extraire_noms(noms_fichiers):
