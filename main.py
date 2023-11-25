@@ -1,8 +1,7 @@
 import os
 from functions import *
 
-dirPath = r"speeches"
-noms_fichiers = [f for f in os.listdir(dirPath) if os.path.isfile(os.path.join(dirPath, f))]
+noms_fichiers = list_of_files('speeches', '.txt')
 print(noms_fichiers)
 
 #extraction des noms à partir des documents
@@ -16,3 +15,4 @@ print(noms_prenoms)
 #afficher la liste des noms des présidents sans doublon
 unique_noms_presidents = liste_noms(noms_presidents)
 print(unique_noms_presidents)
+
