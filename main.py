@@ -16,4 +16,3 @@ print(noms_prenoms)
 #afficher la liste des noms des présidents sans doublon
 unique_noms_presidents = liste_noms(noms_presidents)
 print(unique_noms_presidents)
-print(test)
