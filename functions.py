@@ -26,8 +26,3 @@ def associer_prenom(noms_presidents):
 def liste_noms(noms_presidents):
     noms_presidents = list(set(noms_presidents))
     return noms_presidents
-
-def conversion():
-    directory = "./speeches"
-    files_names = list_of_files(directory, "txt")
-    print_list(files_names)
