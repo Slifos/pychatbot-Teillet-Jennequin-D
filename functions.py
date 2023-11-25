@@ -1,5 +1,5 @@
 import re
-tes
+
 #extraction des noms à partir des documents
 def extraire_noms(noms_fichiers):
     noms_presidents = []
