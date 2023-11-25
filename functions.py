@@ -21,3 +21,4 @@ def associer_prenom(noms_presidents):
 def liste_noms(noms_presidents):
     noms_presidents = list(set(noms_presidents))
     return noms_presidents
+test
