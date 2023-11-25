@@ -3,7 +3,7 @@ import os
 def list_of_files(directory, extension):
     files_names = []
     for filename in os.listdir('speeches'):
-        if filename.endswith('.txt'):
+        if filename.endswith('txt'):
             files_names.append(filename)
     return files_names
 
