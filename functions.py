@@ -1,12 +1,11 @@
+import re
 def est_sous_chaine(chaine, sous_chaine):
     return sous_chaine in chaine
 
-# Exemple d'utilisation
-chaine_principale = "Bonjour, comment ça va ?"
-sous_chaine_a_verifier = "comment"
-
-if est_sous_chaine(chaine_principale, sous_chaine_a_verifier):
-    print(f"{sous_chaine_a_verifier} est une sous-chaîne de {chaine_principale}")
-else:
-    print(f"{sous_chaine_a_verifier} n'est pas une sous-chaîne de {chaine_principale}")
-    #test
+#extraction des noms à partir des documents
+def extraire_noms(noms_fichiers):
+    noms_presidents = []
+    for nom_fichier in noms_fichiers:
+        nom_president = re.sub(r'Nomination_|\.txt|\d$', '', nom_fichier)
+        noms_presidents.append(nom_president)
+    return noms_presidents
