@@ -8,7 +8,7 @@ def list_of_files(directory: str, extension: str):
             files_names.append(filename)
     return files_names
 
-def extraire_noms(noms_fichiers):
+def extraire_noms(noms_fichiers : list):
     """extraire les noms des présidents à partir des noms des fichiers"""
     noms_presidents = []
     for nom_fichier in noms_fichiers:
@@ -16,7 +16,7 @@ def extraire_noms(noms_fichiers):
         noms_presidents.append(nom_president)
     return noms_presidents
 
-def associer_prenom(noms_presidents):
+def associer_prenom(noms_presidents : list):
     """association d'un prénom à chaque président"""
     liste_prenoms = ['Jacques' , 'Jacques', 'Valéry ', 'François ', 'Emmanuel ', 'François', 'François', 'Nicolas']
     associations = {}
@@ -25,7 +25,7 @@ def associer_prenom(noms_presidents):
         associations[nom] = prenom
     return associations
 
-def liste_noms(noms_presidents):
+def liste_noms(noms_presidents : list):
     """affichage de la liste des noms des présidents sans doublon"""
     noms_presidents = list(set(noms_presidents))
     return noms_presidents
@@ -46,4 +46,8 @@ def conversion_minuscule():
                                 f2.write(chr(val_ord))
                             else:
                                 f2.write(elt)
+    return
+
+def sup_ponctuation():
+    """suppre"""
     return
