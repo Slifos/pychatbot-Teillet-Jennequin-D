@@ -1,4 +1,3 @@
-import os
 from functions import *
 
 #extraction des noms des documents
@@ -17,4 +16,5 @@ print(noms_prenoms)
 unique_noms_presidents = liste_noms(noms_presidents)
 print(unique_noms_presidents)
 
-test = conversion_minuscule()
+#conversion des textes des 8 fichiers en miniscules qui sont ensuite stockés dans le dossier cleaned
+convertir = conversion_minuscule()
