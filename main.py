@@ -18,3 +18,6 @@ print(unique_noms_presidents)
 
 #conversion des textes des 8 fichiers en miniscules qui sont ensuite stockés dans le dossier cleaned
 convertir = conversion_minuscule()
+
+#suppression de la ponctuation dans un fichier choisi parmi ceux du dossier cleaned
+suppression = sup_ponctuation("Nomination_Hollande.txt")

@@ -40,14 +40,31 @@ def conversion_minuscule():
                 with open(input_file_path, 'r') as f1 , open(output_file_path, 'w') as f2:
                     lines = f1.readlines()
                     for line in lines:
-                        for elt in line:
-                            if (ord(elt) >= 65) and (ord(elt) <= 90):
-                                val_ord = ord(elt) + 32
+                        for caractere in line:
+                            if (ord(caractere) >= 65) and (ord(caractere) <= 90):
+                                val_ord = ord(caractere) + 32
                                 f2.write(chr(val_ord))
                             else:
-                                f2.write(elt)
+                                f2.write(caractere)
     return
 
-def sup_ponctuation():
-    """suppre"""
-    return
+def sup_ponctuation(filename: str):
+    """Suppression de la ponctuation dans tous les fichiers textes du dossier cleaned"""
+    for file in os.listdir('cleaned'):
+        input_file_path = os.path.join('cleaned', file)
+        output_file_path = os.path.join('cleaned', file)
+        if file == filename:
+            with open(input_file_path, 'r') as f1:
+                lines = f1.readlines()
+                for i in range(len(lines)):
+                    updated_line = ""
+                    for char in lines[i]:
+                        if (ord(char) < 97) or (ord(char) > 122) and char not in ["'", '-']:
+                            updated_line += ' '
+                        else:
+                            updated_line += char
+                    lines[i] = updated_line + '\n'
+
+            # Write the modified lines back to the file
+            with open(output_file_path, 'w') as f2:
+                f2.writelines(lines)
