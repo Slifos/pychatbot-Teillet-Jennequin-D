@@ -1,6 +1,7 @@
 import os
 from functions import *
 
+#extraction des noms des documents
 noms_fichiers = list_of_files('speeches', '.txt')
 print(noms_fichiers)
 
@@ -16,3 +17,4 @@ print(noms_prenoms)
 unique_noms_presidents = liste_noms(noms_presidents)
 print(unique_noms_presidents)
 
+test = conversion_minuscule()
