@@ -68,3 +68,4 @@ def sup_ponctuation(filename: str):
             # Write the modified lines back to the file
             with open(output_file_path, 'w') as f2:
                 f2.writelines(lines)
+    return
