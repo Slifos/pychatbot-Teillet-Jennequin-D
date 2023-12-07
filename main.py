@@ -1,23 +1,47 @@
-from functions import *
+from fonction import *
+import os
 
-#extraction des noms des documents
-noms_fichiers = list_of_files('speeches', '.txt')
-print(noms_fichiers)
+if __name__ == "__main__":
+    f_cleaned("./speeches/")
+    tfidf = tf_idf("./cleaned/")
 
-#extraction des noms à partir des documents
-noms_presidents = extraire_noms(noms_fichiers)
-print(noms_presidents)
+    print("Voulez vous savoir la matrice tf-idf des discours des anciens présidents français?")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        print(tfidf)
 
-#associer prénom aux présidents
-noms_prenoms = associer_prenom(noms_presidents)
-print(noms_prenoms)
+    print("Voulez vous savoir les mots ayant les plus petits tf-idf?")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        pas_important(tfidf)
 
-#afficher la liste des noms des présidents sans doublon
-unique_noms_presidents = liste_noms(noms_presidents)
-print(unique_noms_presidents)
+    print("Voulez vous savoir à l'inverse le ou les mots avec le plus grand tf-idf")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        eleve(tfidf)
+    print("Voulez vous savoir les mots les plus répétés par Chirac?")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        chirac_mot()
+    print("Voulez vous savoir quels présidents ont parlé de la nation et celui qui en a le plus parlé?")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        nation(tfidf)
 
-#conversion des textes des 8 fichiers en miniscules qui sont ensuite stockés dans le dossier cleaned
-convertir = conversion_minuscule()
+    print("Voulez vous savoir quel président a parlé du climat ou du theme lié à l'écologie en premier ?")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        climat(tfidf)
 
-#suppression de la ponctuation dans un fichier choisi parmi ceux du dossier cleaned
-suppression = sup_ponctuation("Nomination_Hollande.txt")
+    print("Voulez vous savoir quel mot tous les présidents ont au moins utilisé durant leur discours?")
+    rep = input("oui/non")
+    rep = rep.lower()
+    if rep == "oui":
+        tous_mots(tfidf)
+
