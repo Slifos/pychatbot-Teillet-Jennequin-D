@@ -4,8 +4,13 @@ xetooo = Thibault Teillet          Slifos = Simon Jennequin
 
 INSTRUCTIONS D'EXECUTION DU CODE:
 
-Faites un "run" pour lancer le programme
-Dans l'interface utilisateur, veuillez entrer "oui" ou "non" pour obtenir le contenu souhaité
+Faites un "run" pour lancer le programme.
+
+
+
+
+
+Dans l'interface utilisateur, veuillez entrer "oui" ou "non" pour obtenir le contenu souhaité.
 
 
 
