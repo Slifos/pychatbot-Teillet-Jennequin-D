@@ -373,13 +373,4 @@ def phrase(mot,fichier):
                 char+=elt
     
     return " "
-
-
-
-
-
-
-
-        
-                
-
+   
