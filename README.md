@@ -11,6 +11,7 @@ Dans l'interface utilisateur, veuillez entrer "oui" ou "non" pour obtenir le con
 
 
 LES FONCTIONNALITES PRINCIPALES DE NOTRE APPLICATION:
+
 Il est possible de connaître :
 -	la matrice TF-IDF des discours des anciens présidents français
 -	les mots ayant les plus petits scores TF-IDF parmi tous les documents
