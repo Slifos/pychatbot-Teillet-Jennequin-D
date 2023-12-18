@@ -9,13 +9,7 @@ Faites un "run" pour lancer le programme.
 
 Dans l'interface utilisateur, veuillez entrer "oui" ou "non" pour obtenir le contenu souhaité.
 
-
-
-
-
-LES FONCTIONNALITES PRINCIPALES DE NOTRE APPLICATION:
-
-Il est possible de connaître :
+Les fonctionnalités principales de notre application sont de connaître :
 -	la matrice TF-IDF des discours des anciens présidents français
 -	les mots ayant les plus petits scores TF-IDF parmi tous les documents
 -	les mots ayant le mot ayant le plus grand scores TF-IDF parmi tous les documents
