@@ -1,4 +1,5 @@
 from fonction import*
+import os
 def pas_important(t_2D):
     T=[]
     for i in range(1,len(t_2D)):
