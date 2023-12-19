@@ -1,4 +1,5 @@
 from fonction import *
+from fonction_bis import *
 import os
 
 
