@@ -60,5 +60,4 @@ def climat(t_2D):
         f.close()
         if "climat" in d.keys() or "ecologie" in d.keys():
             print(t_2D[i][0])
-            return t_2D[i][0]
-    
+            return t_2D[i][0]    
