@@ -46,11 +46,6 @@ if choix == 1:
         if rep == "oui":
             climat(tfidf)
 
-        print("Voulez vous savoir quel mot tous les présidents ont au moins utilisé durant leur discours?")
-        rep = input("oui/non")
-        rep = rep.lower()
-        if rep == "oui":
-            tous_mots(tfidf)
 else:
     if __name__ == "__main__":
         f_cleaned("./speeches/")
