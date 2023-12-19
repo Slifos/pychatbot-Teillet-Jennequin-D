@@ -13,4 +13,7 @@ Les fonctionnalités principales de notre application sont de connaître :
 
 Pour exécuter notre code il faut:
 - faire un "run" pour lancer le programme.
-- dans l'interface utilisateur, veuillez entrer "oui" ou "non" pour obtenir le contenu souhaité.
+- entrer 1 pour accèder aux fonctionnalités porposées lors de la première partie du projet:
+      -     dans l'interface utilisateur, veuillez entrer "oui" ou "non" pour obtenir le contenu souhaité.
+- entrer 2 pour poser une question au tchatBot:
+      -      poser votre question   
