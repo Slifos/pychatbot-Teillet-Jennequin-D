@@ -38,9 +38,10 @@ def nation(t_2D):
     i=1
     max=-1
     max_president="personne"
-    while i<len(t_2D) and t_2D[0][i-1]!="nation":
+    while i<len(t_2D[0]) and t_2D[0][i-1]!="nation":
         if t_2D[0][i]=="nation":
-            for j in range(1,len(t_2D[0])):
+            for j in range(1,len(t_2D)):
+                
                 f=open("./cleaned/"+t_2D[j][0]+".txt","r")
                 line=f.read()
                 d=tf(line)
