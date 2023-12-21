@@ -226,7 +226,6 @@ def intersection(fichier,L_token):
     line = f.readlines()
     #print(line)
     
-
     L_fichier= mot(line[0])
     
     L_inter = []
@@ -267,12 +266,14 @@ def scalaire(A,B):
     for i in range(len(A)):
         s+=A[i]*B[i]
     return s
+    
 def norme(A):
     s=0
     for elt in A:
         s+=elt**2
     s=math.sqrt(s)
     return s
+    
 def similarite(A,B):
     scal = scalaire(A,B)
     normeA=norme(A)
@@ -280,9 +281,9 @@ def similarite(A,B):
     if normeA==0 or normeB==0:
         res=0
     else:
-
         res=scal/(normeA*normeB)
     return res
+    
 def pertinent(tfidf,tfidf_token):
     maxi=0
     important =0
@@ -303,7 +304,6 @@ def grand_tfidf(tfidf):
             if tfidf[i][j]>maxi:
                 maxi=tfidf[i][j]
                 mot_important=tfidf[0][j]
-    
     return mot_important
     
 def starter(question):
