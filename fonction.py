@@ -122,6 +122,7 @@ def teste_occ(mot,list_T):
             if j==mot:
                 s+=1
     return s
+    
 def idf(directory):
     files=list_of_files(directory, ".txt")
     matrice_mot=[]
@@ -137,6 +138,7 @@ def idf(directory):
             d[j]=math.log(n/teste_occ(j,matrice_mot))
     #print(d)
     return d
+    
 def m_mot(directory):
     files=list_of_files(directory, ".txt")
     matrice_mot=[]
@@ -146,6 +148,7 @@ def m_mot(directory):
         T=mot(line)
         matrice_mot.append(T)
     return matrice_mot
+    
 def mot_2D(matrice_mot):
     """retourne un tableau de mot unique à partir d un tableau 2D remplie de mot"""
     T=[]
@@ -158,6 +161,7 @@ def mot_2D(matrice_mot):
                 
     
     return T
+    
 def tf_idf(directory):
     """retourne une liste tf idf de chaque mot (qui correspond au colonne) dans chaque document(qui correspond à la ligne)"""
     matrice_mot=m_mot(directory)
@@ -184,6 +188,7 @@ def tf_idf(directory):
                 tfidf[i].append(res)
         f.close()
     return tfidf
+    
 def affichage_matrice(L):
     f=open("réecriture.txt","w")
     for elt in L:
@@ -215,6 +220,7 @@ def token(chain):
     if s!="":
         L.append(s)
     return L
+    
 def intersection(fichier,L_token):
     f = open("./cleaned/"+fichier+".txt","r")
     line = f.readlines()
@@ -255,6 +261,7 @@ def tfidf_token(chain):
             else:
                 tfidf[i][j]=0.0
     return tfidf
+    
 def scalaire(A,B):
     s=0
     for i in range(len(A)):
@@ -287,6 +294,7 @@ def pertinent(tfidf,tfidf_token):
             maxi=simi
             important=tfidf[i][0]
     return important
+    
 def grand_tfidf(tfidf):
     maxi=0
     mot_important=""
@@ -297,6 +305,7 @@ def grand_tfidf(tfidf):
                 mot_important=tfidf[0][j]
     
     return mot_important
+    
 def starter(question):
     question.lower()
     question_starters = {"comment": "Après analyse, ","pourquoi": "Car, ","peux-tu": "Oui, bien sûr!"}
@@ -308,9 +317,9 @@ def starter(question):
                 return question_starters[char]
         char+=elt
     return ""
+    
 
 def réponse(tfidf,tfidf_token,question):
-    
     
     mot_imp=grand_tfidf(tfidf_token)
 
@@ -339,12 +348,11 @@ def réponse(tfidf,tfidf_token,question):
     
     return start+ phrase_f[0]
 
+
 def phrase(mot,fichier):
 
-    
     f = open("./speeches/"+fichier,"r",encoding="utf8")
     lines=f.readlines()
-    
     
     for line in lines:
         i=0
